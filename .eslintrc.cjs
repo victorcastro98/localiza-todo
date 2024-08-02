@@ -4,8 +4,8 @@ module.exports = {
     browser: true, 
     es2020: true,
     amd: true,
-    node: true
-
+    node: true,
+    es6: true
   },
   extends: [
     'eslint:recommended',
