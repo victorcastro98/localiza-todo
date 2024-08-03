@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Lista de Tarefas (To-Do List)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+App de lista de tarefas que permite adicionar, excluir, visualizar e marcar tarefas como concluída.
 
-Currently, two official plugins are available:
+## Available Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `npm run dev`
+- `npm run build`
+- `npm run lint`
+- `npm run preview`
 
-## Expanding the ESLint configuration
+## Tarefas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [X] Componentizar a aplicação, aplicando boas práticas de desenvolvimento
+- [X] Possibilitar a edição de uma tarefa
+- [ ] Fazer com que as tarefas persistam mesmo após o recarregamento da página
+- [ ] Visualizar apenas as tarefas concluídas
+- [ ] Visualizar apenas as tarefas não concluídas
+- [ ] Marcar todas as tarefas como concluídas
+- [ ] Excluir todas as tarefas concluídas
+- [ ] Filtrar tarefas por texto
+- [X] Estilizar a aplicação (CSS modules, styled-components, tailwindcss, Bootstrap, MaterialUI, etc)
 
-- Configure the top-level `parserOptions` property like this:
+## Extras
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Utiliza TypeScript
+- Implementar testes unitários
+- Containerizar a aplicação

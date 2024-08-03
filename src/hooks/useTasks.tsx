@@ -1,4 +1,4 @@
-import { ITaskType01, ITaskType02, Task } from "./task.structure";
+import { ITaskType01, ITaskType02, Task } from "../types/task.structure";
 
 export function useTasks() {
 

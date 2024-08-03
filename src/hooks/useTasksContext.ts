@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { TasksContext } from "./TasksProvider";
-import { TasksContextProps } from "./task.structure";
+import { TasksContext } from "../contexts/TasksProvider";
+import { TasksContextProps } from "../types/task.structure";
 
 export const useTasksContext = (): TasksContextProps => {
   const context = useContext(TasksContext);
