@@ -1,4 +1,3 @@
-// src/__tests__/pages/Home.spec.tsx
 import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Home from "../../pages/Home";
@@ -35,8 +34,31 @@ test("check task", () => {
   fireEvent.change(input, { target: { value: "Tarefa para marcar" } });
   fireEvent.click(addButton);
 
-  const checkButton = getAllByText("Concluir")[0];
+  const checkButton = getAllByText("Concluir")[1];
   fireEvent.click(checkButton);
 
   expect(getByText("Desmarcar")).toBeInTheDocument();
+
+  const uncheckButton = getAllByText("Desmarcar")[0];
+  fireEvent.click(uncheckButton);
+
+  const { queryAllByText } = render(testHome);
+  expect(queryAllByText("Desmarcar")).toHaveLength(0);
+});
+
+test("remove task", () => {
+  const { getByText, getByPlaceholderText, getAllByText} = render(testHome);
+
+  const input = getByPlaceholderText("digite nova tarefa");
+  const addButton = getByText("Adicionar");
+
+  fireEvent.change(input, { target: { value: "Tarefa para remover" } });
+  fireEvent.click(addButton);
+
+  expect(getAllByText("Remover").length >= 2);
+
+  const deleteButton = getAllByText("Remover")[2];
+  fireEvent.click(deleteButton);
+
+  expect(getAllByText("Remover").length < 2);
 });
