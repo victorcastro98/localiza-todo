@@ -8,6 +8,7 @@ App de lista de tarefas que permite adicionar, excluir, visualizar e marcar tare
 - `npm run build`
 - `npm run lint`
 - `npm run preview`
+- `npm run test`
 
 ## Tarefas
 
