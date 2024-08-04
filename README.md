@@ -13,12 +13,12 @@ App de lista de tarefas que permite adicionar, excluir, visualizar e marcar tare
 
 - [X] Componentizar a aplicação, aplicando boas práticas de desenvolvimento
 - [X] Possibilitar a edição de uma tarefa
-- [ ] Fazer com que as tarefas persistam mesmo após o recarregamento da página
-- [ ] Visualizar apenas as tarefas concluídas
-- [ ] Visualizar apenas as tarefas não concluídas
-- [ ] Marcar todas as tarefas como concluídas
-- [ ] Excluir todas as tarefas concluídas
-- [ ] Filtrar tarefas por texto
+- [X] Fazer com que as tarefas persistam mesmo após o recarregamento da página
+- [X] Visualizar apenas as tarefas concluídas
+- [X] Visualizar apenas as tarefas não concluídas
+- [X] Marcar todas as tarefas como concluídas
+- [X] Excluir todas as tarefas concluídas
+- [X] Filtrar tarefas por texto
 - [X] Estilizar a aplicação (CSS modules, styled-components, tailwindcss, Bootstrap, MaterialUI, etc)
 
 ## Extras
