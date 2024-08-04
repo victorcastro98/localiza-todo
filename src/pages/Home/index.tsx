@@ -64,8 +64,9 @@ function Home() {
 
   return (
     <div className="text-white bg-green-dark w-full min-h-screen h-full flex flex-col items-center">
-      <div className="w-full bg-white p-2 flex flex-row gap-4 justify-center">
-        <img className="h-[30px]" src={logo} alt="logo" />
+      <div className="w-full bg-white p-2 flex md:flex-row flex-col gap-4 justify-center">
+        <img className="h-[30px] md:flex hidden" src={logo} alt="logo" />
+        <div className="flex flex-row gap-1">
         <Input
           value={newTask}
           placeholder={"digite nova tarefa"}
@@ -78,6 +79,7 @@ function Home() {
             setNewTask("");
           }}
         />
+        </div>
         <Input
           value={filterText}
           placeholder={"Filtrar por texto"}
