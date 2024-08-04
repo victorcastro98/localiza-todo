@@ -1,22 +1,16 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React from "react";
 import { TasksContextProps, TasksType } from "../types/task.structure";
 
-export const TasksContext = createContext<TasksContextProps | undefined>(undefined);
+export const TasksContext = React.createContext<TasksContextProps | undefined>(undefined);
 
-export const TasksProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [tasks, setTasks] = useState<TasksType>([]);
-  const [newTask, setNewTask] = useState<string>("");
-  const [filterText, setFilterText] = useState<string>("");
-
-  React.useEffect(() => {
-    const savedTasks = localStorage.getItem("tasks");
-    if (savedTasks) {
-      setTasks(JSON.parse(savedTasks));
-    }
-  }, []);
+export const TasksProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const localSotageTasks = localStorage.getItem("localTasks");
+  const savedTasks = localSotageTasks ? JSON.parse(localSotageTasks) as TasksType : []
+  const [tasks, setTasks] = React.useState<TasksType>(savedTasks);
+  const [filterText, setFilterText] = React.useState<string>("");
 
   React.useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("localTasks", JSON.stringify(tasks));
   }, [tasks]);
 
   return (
@@ -24,8 +18,6 @@ export const TasksProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       value={{
         tasks,
         setTasks,
-        newTask,
-        setNewTask,
         filterText,
         setFilterText,
       }}

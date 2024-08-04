@@ -18,8 +18,6 @@ export interface ITaskType02 {
 export interface TasksContextProps {
     tasks: TasksType, 
     setTasks: SetTasksType, 
-    newTask: string, 
-    setNewTask: React.Dispatch<React.SetStateAction<string>>, 
     filterText: string, 
     setFilterText: React.Dispatch<React.SetStateAction<string>>
 }

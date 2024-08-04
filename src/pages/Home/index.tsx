@@ -5,9 +5,10 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 
 function Home() {
-  const { tasks, setTasks, newTask, setNewTask, filterText, setFilterText } = useTasksContext();
+  const { tasks, setTasks, filterText, setFilterText } = useTasksContext();
   const { addTask, editTask, toggleTaskCompletion, removeTask } = useTasks();
-  
+  const [newTask, setNewTask] = React.useState<string>("");
+
   const tasksList = React.useMemo(() => {
     return tasks.map((task, index) => (
       <li className="flex flex-row gap-2 mb-2" key={index}>
